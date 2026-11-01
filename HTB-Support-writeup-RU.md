@@ -22,6 +22,33 @@
 
 ```bash
 sudo nmap -sC -sV <ip>
+```
+
+Результат:
+
+```
+PORT     STATE SERVICE       VERSION
+53/tcp   open  domain        Simple DNS Plus
+88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2026-10-31 22:40:42Z)
+135/tcp  open  msrpc         Microsoft Windows RPC
+139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn
+389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: support.htb, Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds?
+464/tcp  open  kpasswd5?
+593/tcp  open  ncacn_http    Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped
+3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: support.htb, Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped
+5985/tcp open  http          Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+
+Host script results:
+| smb2-time:
+|   date: 2026-10-31T22:40:54
+|_  start_date: N/A
+| smb2-security-mode:
+|   3.1.1:
+|_    Message signing enabled and required
+```
 
 ![Результат сканирования nmap](images/01-nmap-scan.png)
 
